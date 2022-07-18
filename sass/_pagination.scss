@@ -1,0 +1,42 @@
+.pagination {
+  margin-bottom: 5rem;
+  &__list {
+    margin: 0 auto;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    @media screen and (max-width: 26.875em) {
+      gap: 1rem;
+      width: 80%;
+    }
+  }
+
+  &__item > a {
+    text-decoration: none;
+    background-color: var(--color-grey-dark);
+    color: var(--color-grey-light-3);
+    font-size: 1.8rem;
+    font-weight: bold;
+    width: 4rem;
+    height: 4rem;
+    border-radius: $border-radius-sm;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease;
+    @media screen and (max-width: 40.625em) {
+      width: 3rem;
+      height: 3rem;
+      font-size: 1.4rem;
+    }
+  }
+
+  &__item:hover > a {
+    color: var(--color-primary-light);
+  }
+
+  &__item.active > a {
+    background-color: var(--color-primary);
+  }
+}

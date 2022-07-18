@@ -1,0 +1,138 @@
+.slider {
+  width: 75%;
+  height: 45rem;
+  margin: 4rem auto;
+  border-radius: $border-radius-sm;
+  overflow: hidden;
+  @media screen and (max-width: 68.75em) {
+    width: 90%;
+  }
+  @media screen and (max-width: 56.25em) {
+    height: 40rem;
+  }
+  @media screen and (max-width: 46.875em) {
+    height: 37rem;
+  }
+  @media screen and (max-width: 40.625em) {
+    height: 32rem;
+    width: 95%;
+  }
+  @media screen and (max-width: 28.125em) {
+    height: 30rem;
+  }
+  // @media screen and (max-width: 23.125em) {
+  //   height: 26vh;
+  // }
+}
+.swiper {
+  height: 100%;
+}
+.slide {
+  width: 100%;
+  height: 100%;
+  text-decoration: none;
+  display: block;
+  position: relative;
+
+  &__img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center center;
+    filter: brightness(95%);
+  }
+
+  &__title {
+    position: absolute;
+    background-image: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5)
+    );
+    left: 10%;
+    bottom: 5%;
+    padding: 1rem 2rem;
+    border-radius: $border-radius-sm;
+    font-size: 3.2rem;
+    letter-spacing: 1px;
+    font-weight: 600;
+    color: var(--color-grey-light-3);
+    @media screen and (max-width: 66.25em) {
+      left: 5%;
+      font-size: 2.8rem;
+    }
+    @media screen and (max-width: 37.5em) {
+      font-size: 2.4rem;
+    }
+    @media screen and (max-width: 37.5em) {
+      font-size: 2rem;
+    }
+  }
+
+  &__rate {
+    position: absolute;
+    left: 10%;
+    bottom: 20%;
+    font-size: 1.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    color: var(--color-grey-light-3);
+    border-radius: $border-radius-sm;
+    background-image: linear-gradient(
+      to right,
+      rgba(20, 20, 20, 0.5),
+      rgba(20, 20, 20, 0.5)
+    );
+    padding: 0.7rem 1.4rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    @media screen and (max-width: 66.25em) {
+      left: 5%;
+    }
+    @media screen and (max-width: 31.25em) {
+      bottom: 22%;
+    }
+    @media screen and (max-width: 25em) {
+      bottom: 25%;
+    }
+
+    strong,
+    ion-icon {
+      font-size: 2.5rem;
+      color: gold;
+      @media screen and (max-width: 37.5em) {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__nav-btn {
+    color: var(--color-primary-light);
+    transition: color 0.3s ease;
+
+    &::after {
+      font-size: 3.2rem;
+      font-weight: 900;
+      @media screen and (max-width: 31.25em) {
+        font-size: 2.5rem;
+      }
+    }
+
+    &:focus {
+      box-shadow: none;
+    }
+
+    &:hover {
+      color: var(--color-grey-light-3);
+    }
+  }
+}
+.pre-load__slider {
+  background-image: linear-gradient(
+    to right bottom,
+    rgba(70, 70, 70, 0.1),
+    rgba(200, 200, 200, 0.1)
+  );
+}

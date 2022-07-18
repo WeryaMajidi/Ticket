@@ -1,0 +1,23 @@
+.main {
+  margin: 0 auto;
+  background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.85),
+      rgba(0, 0, 0, 0.85)
+    ),
+    url("../img/cinema-4.1.jpg");
+  background-size: cover;
+  background-position: center;
+  min-height: 60vh;
+  overflow: hidden;
+}
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 3rem;
+  @media screen and (max-width: 28.125em) {
+    padding: 1rem 1.5rem;
+  }
+}

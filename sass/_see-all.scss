@@ -1,0 +1,7 @@
+.see-all {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  padding: 2rem 8rem;
+  grid-gap: 5rem;
+  grid-row-gap: 0;
+}

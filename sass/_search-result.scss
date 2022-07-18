@@ -1,0 +1,150 @@
+/*--- SEARCH RESULT---*/
+.result__list {
+  list-style: none;
+  width: 100%;
+  z-index: 30;
+  border-radius: 9px;
+  overflow: hidden;
+  position: absolute;
+  top: 4.5rem;
+  max-height: 50rem;
+  max-height: 63vh;
+  z-index: 50;
+
+  overflow-y: scroll;
+
+  scrollbar-color: var(--color-primary-light) var(--color-grey-dark-3);
+  scrollbar-width: thin !important;
+  /* width */
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+    border-radius: 100px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: var(--color-grey-dark-3);
+    border-radius: 100px;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    background: var(--color-primary-light);
+    border-radius: 100px;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: var(--color-primary);
+  }
+
+  @media screen and (max-width: 37.5em) {
+    // padding: 1.5rem;
+    // margin-bottom: 1.5rem;
+    top: 4.3rem;
+  }
+  left: 0;
+  color: var(--color-grey-light-3);
+
+  &.hidden {
+    display: none;
+  }
+
+  .result__item {
+    overflow: auto;
+    background-color: var(--color-grey-dark);
+    transition: all 0.25s;
+
+    &:not(:last-child) {
+      border-bottom: 2px solid var(--color-grey-dark-2);
+    }
+
+    &:hover {
+      background-color: var(--color-grey-dark-3);
+    }
+
+    & .result__link {
+      text-decoration: none;
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      grid-gap: 1rem 3rem;
+      align-items: end;
+      padding: 1.5rem;
+      color: var(--color-grey-light-3);
+    }
+    & .result__link--all {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.6rem;
+      text-align: center;
+      cursor: pointer;
+      transition: all 0.3s;
+      padding: 0.5rem;
+
+      &:hover {
+        color: var(--color-primary-light);
+      }
+    }
+
+    &-img {
+      width: 100%;
+      grid-column: 1/2;
+      grid-row: 1/3;
+    }
+
+    &-title {
+      grid-column: 2/3;
+      font-size: 1.8rem;
+      grid-row: 1/2;
+    }
+
+    &-rate {
+      align-self: start;
+      grid-column: 2/3;
+      grid-row: 2/3;
+      display: flex;
+      align-items: center;
+
+      & ion-icon {
+        font-size: 2.5rem;
+        color: var(--color-primary-light);
+        margin-right: 1rem;
+      }
+
+      & span {
+        font-size: 1.6rem;
+        margin-top: 0.3rem;
+      }
+    }
+
+    &:last-child {
+      padding: 1rem 0;
+      text-align: center;
+    }
+  }
+  .result__not-found {
+    width: 100%;
+    padding: 2rem;
+    font-size: 1.6rem;
+    text-align: center;
+    margin: 0 auto;
+  }
+  .spinner {
+    width: 10%;
+    margin: 0 auto;
+    animation: rotate 1.8s infinite linear;
+    img {
+      display: block;
+      width: 100%;
+    }
+  }
+  @keyframes rotate {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}

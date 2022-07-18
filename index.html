@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff1a40" />
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="img/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="img/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="img/favicon-16x16.png"
+    />
+    <link rel="manifest" href="img/site.webmanifest" />
+    <link rel="mask-icon" href="img/safari-pinned-tab.svg" color="#ff1a40" />
+    <meta name="msapplication-TileColor" content="#ff1a40" />
+    <meta name="theme-color" content="#ff1a40" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
+
+    <script type="module" defer src="script/controller.js"></script>
+    <link rel="stylesheet" href="css/style.css" />
+
+    <title>TICKET - Movie and Series info</title>
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <a href="#" class="header__logo">
+          <img src="img/ticket.png" alt="Ticket logo" />
+        </a>
+
+        <form action="#" class="search">
+          <input
+            type="text"
+            class="search__input"
+            placeholder="Search Movies and Series"
+          />
+          <button type="submit" class="search__button">
+            <ion-icon name="search"></ion-icon>
+          </button>
+          <!-- top 3 search results -->
+          <ul class="result__list hidden"></ul>
+        </form>
+
+        <nav class="nav">
+          <ul class="nav__list hidden">
+            <button class="nav__btn nav__btn--close">
+              <ion-icon name="close"></ion-icon>
+            </button>
+            <li class="nav__item nav__item--with-sub">
+              <span><ion-icon name="tv-outline"></ion-icon> Movies</span>
+
+              <ul class="sub-menu sub-menu--movie">
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#movie/top_rated?p=1">Top rated Movies</a>
+                </li>
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#movie/popular?p=1">Trending Movies</a>
+                </li>
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#movie/now_playing?p=1">Now playing Movies</a>
+                </li>
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#movie/upcoming?p=1">Upcoming Movies</a>
+                </li>
+              </ul>
+            </li>
+            <li class="nav__item nav__item--with-sub">
+              <span><ion-icon name="film-outline"></ion-icon> Series</span>
+
+              <ul class="sub-menu sub-menu--series">
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#tv/top_rated?p=1">Top rated Series</a>
+                </li>
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#tv/popular?p=1">Trending Series</a>
+                </li>
+                <li class="sub-menu__item clickable">
+                  <span class="circle"></span>
+                  <a href="#tv/on_the_air?p=1">On the air Series</a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+          <button class="nav__btn nav__btn--open">
+            <ion-icon name="menu"></ion-icon>
+          </button>
+        </nav>
+      </header>
+    </div>
+
+    <div class="content">
+      <div class="container">
+        <main class="main">
+          <div class="slider pre-load__slider"></div>
+          <section class="trending-movies">
+            <h2 class="heading-secondary">Trending Movies</h2>
+            <div class="carousel">
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+            </div>
+          </section>
+          <section class="top-rated-movies">
+            <h2 class="heading-secondary">Top rated Movies</h2>
+            <div class="carousel">
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+            </div>
+          </section>
+          <section class="trending-tv">
+            <h2 class="heading-secondary">Trending TV</h2>
+            <div class="carousel">
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+              <a href="#" class="card">
+                <span class="card__img pre-load__img"> </span>
+                <h4 class="card__title pre-load__text"></h4>
+              </a>
+            </div>
+          </section>
+        </main>
+      </div>
+      <!-- footer -->
+      <div class="container">
+        <footer class="footer">
+          <ul class="social">
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-instagram-new"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="social__item">
+              <a href="#" class="social__link">
+                <svg class="social__icon">
+                  <use xlink:href="img/sprite.svg#icon-youtube-play"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+          <p class="footer__copy-right">
+            &copy; Copyright by <span class="designer">Werya Majidi</span>
+          </p>
+        </footer>
+      </div>
+    </div>
+
+    <!-- swiper -->
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <!-- ION-ICON -->
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+  </body>
+</html>
